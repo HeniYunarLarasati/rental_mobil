@@ -25,10 +25,15 @@ Route::get('petugas','PetugasController@tampil')->middleware('jwt.verify');
 Route::put('petugas/{id}', 'PetugasController@update')->middleware('jwt.verify');
 Route::delete('petugas/{id}','PetugasController@delete')->middleware('jwt.verify');
 
-Route::post('pelanggan','PelangganController@store')->middleware('jwt.verify');
-Route::get('pelanggan','PelangganController@tampil')->middleware('jwt.verify');
-Route::put('pelanggan/{id}', 'PelangganController@update')->middleware('jwt.verify');
-Route::delete('pelanggan/{id}','PelangganController@delete')->middleware('jwt.verify');
+Route::post('penyewa','PenyewaController@store')->middleware('jwt.verify');
+Route::get('penyewa','PenyewaController@tampil')->middleware('jwt.verify');
+Route::put('penyewa/{id}', 'PenyewaController@update')->middleware('jwt.verify');
+Route::delete('penyewa/{id}','PenyewaController@delete')->middleware('jwt.verify');
+
+Route::post('mobil','MobilController@store')->middleware('jwt.verify');
+Route::get('mobil','MobilController@tampil')->middleware('jwt.verify');
+Route::put('mobil/{id}', 'MobilController@update')->middleware('jwt.verify');
+Route::delete('mobil/{id}','MobilController@delete')->middleware('jwt.verify');
 
 Route::post('jenis','jenisController@store')->middleware('jwt.verify');
 Route::get('jenis','jenisController@tampil')->middleware('jwt.verify');
